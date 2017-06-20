@@ -1,0 +1,44 @@
+@import "variables";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+@import "materialize";
+
+body {
+  background-color: $primary-bg-color;
+  overflow-x: hidden;
+}
+
+.notice{
+  @extend .green;
+  @extend .accent-2;
+}
+
+.alert {
+  @extend .red;
+  @extend .accent-2;
+}
+
+.primary {
+  background-color: $primary-color;
+}
+
+.primary-text {
+  color: $primary-color;
+}
+
+.main-spinner {
+  position: fixed;
+  opacity: 0.9;
+  top: 56px;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-color;
+  
+  .preloader-wrapper {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+  }
+}
