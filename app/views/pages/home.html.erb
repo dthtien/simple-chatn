@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="center">Chat App</h1>
+<div class="btn-group center">
+<% if logged_in? %>
+  <p>Welcome <%= current_user.name %></p>
+<% else %>
+  <%= link_to "Sign Up", sign_up_path, class: "btn blue" %>
+  <%= link_to "Sign In",  log_in_path, class: "btn blue"%>
+<% end %>
+</div>

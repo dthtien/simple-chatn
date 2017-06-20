@@ -10,8 +10,9 @@ body {
 
 .notice{
   @extend .green;
-  @extend .accent-2;
+  @extend .darken-2;
 }
+
 
 .alert {
   @extend .red;
@@ -26,7 +27,7 @@ body {
   color: $primary-color;
 }
 
-.main-spinner {
+#main-spinner {
   position: fixed;
   opacity: 0.9;
   top: 56px;
