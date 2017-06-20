@@ -14,9 +14,12 @@
       <li></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
+      <% if logged_in? %>
+        <li><%= link_to "Log Out", log_out_path, method: "delete" %></li>
         <li></li>
-        <li></li> 
+      <% else %> 
         <li></li>
+        <% end %>
     </ul>
 </div>
 </nav>
