@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   protected
-    def authenticate_user
+    def authenticate_user!
       unless logged_in?
         flash[:alert] = "Login to continue"
         redirect_to root_path

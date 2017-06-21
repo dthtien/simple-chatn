@@ -1,0 +1,16 @@
+.list-messages{
+  border: 1px solid grey;
+  .message{
+  margin-top: 5px;
+  a{
+    padding-top: 5px;
+  }
+  span.chip{
+    background-color: lightgrey;
+  }
+}
+}
+.form-message{
+  border-top: 1px solid grey;
+  margin-top: 50px;
+}

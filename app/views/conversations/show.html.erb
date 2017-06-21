@@ -1,0 +1,13 @@
+<div class="conversation">
+  <div class="receiver center">
+    <p class="chip blue white-text"><%= @conversation.receiver.name %></p>
+  </div>
+
+  <div class="list-messages">
+  <%= render @conversation.messages %> 
+  </div>
+
+  <div class="form-message">
+    <%= render 'messages/form' %>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'searches/show'
+
   root 'pages#home'
 
   get 'log_in' => "sessions#new"
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
   get 'sign_up' => "users#new"
 
   resources :users
+  resource :search, only: :show
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :conversations, only: [:create, :index, :show] do
+    resources :messages, only: [:create, :index]
+  end
+
 end
