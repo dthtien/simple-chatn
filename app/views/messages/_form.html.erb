@@ -1,4 +1,4 @@
 <%= simple_form_for [@conversation, @message] do |f| %>
-<%= f.input :content %>
-<%= f.submit "Send", class: "btn blue" %>
+<%= f.input :content, input_html: {id: "message-text-area"} %>
+<%= f.submit "Send", class: "btn blue", id: "btn-send" %>
 <% end %>

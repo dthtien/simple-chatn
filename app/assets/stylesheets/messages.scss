@@ -1,16 +1,25 @@
 .list-messages{
-  border: 1px solid grey;
+  padding: 10px;
   .message{
-  margin-top: 5px;
-  a{
-    padding-top: 5px;
+    margin-top: 5px;
+    a{
+      padding-top: 5px;
+    }
+    span.chip{
+      margin-left: 4px;
+      background-color: lightgrey;
+    }
   }
-  span.chip{
-    background-color: lightgrey;
+  .form-message{
+    border-top: 1px solid grey;
+    margin-top: 50px;
+    padding: 20px 0 20px 0;
+    div.message_content{
+      width: 80%;
+      padding-top: 20px;
+    }
+    #btn-send{
+      margin-top: 40px
+    }
   }
-}
-}
-.form-message{
-  border-top: 1px solid grey;
-  margin-top: 50px;
 }

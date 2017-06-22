@@ -9,11 +9,9 @@
   </head>
   <body>
     <%= render "layouts/nav" %>
-    <%= render "searches/form" %>
+    <%= render "searches/form" if logged_in? %>
     <%= render "layouts/flash" %>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <%= yield %>
     <div id="main-spinner">
       <%= render 'shared/spinner', size: "" %>
     </div>
