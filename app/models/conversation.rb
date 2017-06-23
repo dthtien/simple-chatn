@@ -4,7 +4,7 @@ class Conversation < ApplicationRecord
   has_many :messages, dependent: :destroy
   
   def self.find_or_create(sender_id, receiver_id)
-    where("(sender_id = ? AND receiver_id = ?) OR (receiver_id = ? AND sender_id = ?)", sender_id, receiver_id, sender_id, receiver_id)
+    includes(:messages).where("(sender_id = ? AND receiver_id = ?) OR (receiver_id = ? AND sender_id = ?)", sender_id, receiver_id, sender_id, receiver_id)
       .first_or_create do |conv|
       conv.sender_id = sender_id
       conv.receiver_id = receiver_id

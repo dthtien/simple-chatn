@@ -2,10 +2,6 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!
   before_action :find_conversation
 
-  def index
-    @message = @conversation.messages.build
-  end
-
   def create 
     @message = @conversation.messages.build(message_params)
     @message.sender = current_user
