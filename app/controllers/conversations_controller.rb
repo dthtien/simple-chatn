@@ -6,7 +6,8 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @conversation = Conversation.find_or_create(current_user.id, params[:receiver_id])
-    redirect_to conversation_messages_path(@conversation)
+    @conversation = Conversation.find_or_create(params[:sender_id], params[:receiver_id])
+    current_user.read_messages(@conversation)
+    redirect_to @conversation
   end
 end

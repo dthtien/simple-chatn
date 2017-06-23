@@ -1,9 +1,7 @@
 <div class="row">  
   <div class="col s12 l12">
-    <div class="message <%= current_user.author?(message) ? 'left' : 'right' %>">
-      <%= link_to "#{message.sender.try(:name)}: ", "#",
-      class: "#{ current_user.author?(message) ? 'left' : 'right'}" %> 
-      <span class="chip">
+    <div class="message <%= !current_user.author?(message) ? 'left' : 'right' %>">
+      <span class="chip <%= 'blue white-text' if  current_user.author?(message)%>">
         <%= message.content %>
       </span>
     </div>

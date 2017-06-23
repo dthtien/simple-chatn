@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       flash[:notice] = "Hello #{user.name}"
       log_in(user)
-      redirect_to root_path
+      conversations = user.all_conversations
+      redirect_to conversations.blank? ? root_path : conversations.first
     else
       flash.now[:alert] = "Please check your email and password"
       render :new

@@ -1,22 +1,24 @@
 <div class="card">
   <div class="row">
     <div class="col s3 l3">
-      
+      <ul class="list-conversation">
+        <% current_user.all_conversations.each do |conversation| %>
+          <%= render conversation, active: conversation == @conversation ? "current-conversation" : "" %>
+        <% end %>
+      </ul>
     </div>
     <div class="col s9 l9">
       <div class="conversation">
         <div class="receiver center">
-          <p class="chip blue white-text"><%= @conversation.receiver.name %></p>
+          <p><%= show_name @conversation %></p>
         </div>
-
         <div class="list-messages">
         <%= render @conversation.messages %> 
         <div class="form-message">
           <%= render 'messages/form' %>
         </div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
+</div> 

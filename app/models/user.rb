@@ -21,6 +21,12 @@ class User < ApplicationRecord
     self.conversations.distinct
   end
 
+  def read_messages(conversation)
+    conversation.messages.where.not(sender_id: self.id).each do |message|
+      message.update_attributes(read: true)
+    end
+  end
+
   private
     def downcase_email
       self.email = email.downcase
