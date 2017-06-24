@@ -6,12 +6,14 @@ class MessagesController < ApplicationController
     @message = @conversation.messages.build(message_params)
     @message.sender = current_user
     if @message.save
-      flash[:notice] = "Message was created!"
-      redirect_to @conversation
-    else
-      flash.now[:alert] = "Can't create message"
-      render :index
+      respond_to do |format|
+        format.js
+      end
     end
+    # else
+    #   flash.now[:alert] = "Can't create message"
+    #   render :index
+    # end
   end
 
   private
