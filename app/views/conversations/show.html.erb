@@ -13,7 +13,9 @@
           <p><%= show_name @conversation %></p>
         </div>
         <div class="list-messages">
-        <%= render @conversation.messages %> 
+          <ul id="list-messages">
+            <%= render @conversation.messages %> 
+          </ul>
         <div class="form-message">
           <%= render 'messages/form' %>
         </div>
