@@ -1,4 +1,4 @@
-<li class="<%= active %>">
+<li class="<%= active ||= "" %>">
   <%= link_to conversations_path(receiver_id: conversation.receiver.id, sender_id: conversation.sender.id), method: :post, class: "each-conversation" do %>
     <div class="row valign-wrapper">
       <div class="col s2">
@@ -12,7 +12,10 @@
             <i class="update-time right"><%= display_time message.created_at %></i>
           </p>
           <p class="<%= "unread-msg" unless message.read %>">
-            <%= message.content %></p>
+            <%= message.content[0..15] %></p>
+            <% if message.read %>
+              <i><%= "read at #{time_ago_in_words message.updated_at}" %></i>
+            <% end %>
         </div>
       </div>
     </div>
