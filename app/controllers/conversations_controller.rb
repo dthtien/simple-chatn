@@ -15,13 +15,8 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    if current_user == params[:sender_id] || current_user == params[:receiver_id]
-      @conversation = Conversation.find_or_create(params[:sender_id], params[:receiver_id])
-      current_user.read_messages(@conversation)
-      redirect_to @conversation
-    else
-      flash[:alert] = "Page not found"
-      redirect_to root_path  
-    end
+    @conversation = Conversation.find_or_create(params[:sender_id], params[:receiver_id])
+    current_user.read_messages(@conversation)
+    redirect_to @conversation
   end
 end

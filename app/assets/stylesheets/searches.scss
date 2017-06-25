@@ -1,3 +1,20 @@
-// Place all the styles related to the searches controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#search-results{
+  margin: 0 50px 50px 50px;
+  background-color: #fff;
+  min-width: 100px;
+  max-height: 650px;
+  z-index: 999;
+  will-change: width, height;
+  li{
+    padding: 5px;
+    a{
+      font-size: 16px;
+      display: block;
+      line-height: 22px;
+      padding: 10px 12px;
+    }
+    &:hover{
+      background-color: #eee;
+    }
+  }
+}
