@@ -10,9 +10,9 @@ URL: **https://obscure-dawn-90234.herokuapp.com**
 
 ## User Stories
 Account test
-acc1: email:  test1@test.com
+- Acc1: email:  test1@test.com
        pass:     123123
-acc2 email:  test2@test.com
+- Acc2 email:  test2@test.com
        pass:     123123
 The following **required** functionality is complete:
 
