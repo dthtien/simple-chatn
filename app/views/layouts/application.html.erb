@@ -7,8 +7,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <%= render "layouts/nav" %>
+    <%= render "searches/form" if logged_in? %>
+    <%= render "layouts/flash" %>
     <%= yield %>
+    <div id="main-spinner">
+      <%= render 'shared/spinner', size: "" %>
+    </div>
   </body>
 </html>

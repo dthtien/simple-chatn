@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="user">
+    <h4><%= user.name %></h4>
+    <%= link_to conversations_path(receiver_id: user.id, sender_id: current_user.id), method: :post, class: "tooltipped", data: {delay: "10", tooltip: "Send a message to #{user.name}", position: "right"} do %>
+      <i class="material-icons">send</i>
+    <% end %>
+    <% if current_user.friend?user %>
+      <%= link_to "unfriend", unfriend_path(friend_id: user.id), method: :post, class: "btn right red" %>
+    <% else %>
+      <%= link_to "add friend", add_friend_path(friend_id: user.id), method: :post, class: "btn right" %>
+    <% end %>
+  </div>
+</div>

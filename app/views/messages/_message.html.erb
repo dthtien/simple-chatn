@@ -1,0 +1,16 @@
+<div class="each-message">
+  <div class="row">  
+    <div class="col s12 l12">
+      <div class="message <%= !current_user.author?(message) ? 'left' : 'right' %>">
+        <div class="chip <%= 'blue white-text' if  current_user.author?(message)%>">
+          <%= message.content %>
+        </div>
+        <div>
+          <% if message.read %>
+            <i class="read-at"><%= "read at #{time_ago_in_words message.updated_at}  ago" %></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

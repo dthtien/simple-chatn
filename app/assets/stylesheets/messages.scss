@@ -1,0 +1,30 @@
+.list-messages{
+  padding: 10px;
+  .each-message{
+    margin-top: 2px;
+    .message{
+      a{
+        padding-top: 5px;
+      }
+      span.chip{
+        margin-left: 4px;
+        background-color: lightgrey;
+      }
+      i.read-at{
+        font-size: 8px;
+      }
+    }
+  }
+  .form-message{
+    border-top: 1px solid lightgrey;
+    margin-top: 4px;
+    padding: 20px 0 20px 0;
+    div.message_content{
+      width: 80%;
+      padding-top: 0px;
+    }
+    #btn-send{
+      margin-top: 30px
+    }
+  }
+}

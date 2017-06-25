@@ -1,0 +1,16 @@
+<div class="container">
+  <%= simple_form_for :search, url: search_path, method: :get,
+    html: { autocomplete: "off" } do |f| %>
+    <div class="row">
+      <div class="col s12 m11 l11">
+        <%= f.text_field :term, class: "small", placeholder: "Enter name or email receiver to create message" %>
+      </div>
+      <div class="input-field col s12 m1 l1">
+        <%= f.button :button,  class: "waves-effect waves-light" do %>
+          <i class="material-icons">search</i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <ul id="search-results"></ul>
+</div>

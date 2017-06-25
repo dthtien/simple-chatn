@@ -1,0 +1,39 @@
+.conversation{
+  padding: 10px;
+  border-left: 1px solid lightgrey;
+  .receiver{
+    border-bottom: 1px solid lightgrey;
+    font-size: 1em;
+  }
+}
+
+.each-conversation{
+  height: 4.5em;
+  cursor: pointer;
+  padding-top: 5px;
+  img.user-image{
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  .receiver-name{
+    margin-left: 15px;
+    .unread-msg{
+      font-weight: bold;
+      
+    }
+  }
+}
+.list-conversation{
+  list-style: none;
+  li.current-conversation{
+    width: 105%;
+    background-color: rgba(211, 211, 211, 0.18); 
+  }
+  li{
+    &:hover{
+      width: 105%;
+      background-color: rgba(211, 211, 211, 0.18); 
+    }
+  }
+}
