@@ -2,6 +2,8 @@
 <div class="btn-group center">
 <% if logged_in? %>
   <p>Welcome <%= current_user.name %></p>
+  <%= link_to "Find friends", users_path, class: "btn" %>
+  <%= link_to "Conversations", conversations_path, class: "btn" %>
 <% else %>
   <%= link_to "Sign Up", sign_up_path, class: "btn blue" %>
   <%= link_to "Sign In",  log_in_path, class: "btn blue"%>

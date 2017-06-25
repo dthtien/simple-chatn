@@ -20,11 +20,16 @@ class User < ApplicationRecord
     message.sender == self
   end
 
-  def all_conversations
+  def all_conversations_have_message
     self.conversations.distinct
   end
 
+  def all_conversations
+    Conversation.where("sender_id = ? OR receiver_id = ?", self.id, self.id)
+  end
+
   def read_messages(conversation)
+    return if conversation.messages.blank?
     conversation.messages.where.not(sender_id: self.id).each do |message|
       message.update_attributes(read: true)
     end

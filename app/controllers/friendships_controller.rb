@@ -3,7 +3,7 @@ class FriendshipsController < ApplicationController
   before_action :find_friend
   def add_friend
     if current_user.befriend(@friend)
-      flash[:notice] = "Added!"
+      flash[:notice] = "#{@friend.name} now is your friend!"
     else
       flash[:notice] = "Cannot create"
     end

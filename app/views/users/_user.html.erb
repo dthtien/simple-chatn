@@ -5,7 +5,7 @@
       <i class="material-icons">send</i>
     <% end %>
     <% if current_user.friend?user %>
-      <%= link_to "unfriend", unfriend_path(friend_id: user.id), method: :post, class: "btn right" %>
+      <%= link_to "unfriend", unfriend_path(friend_id: user.id), method: :post, class: "btn right red" %>
     <% else %>
       <%= link_to "add friend", add_friend_path(friend_id: user.id), method: :post, class: "btn right" %>
     <% end %>

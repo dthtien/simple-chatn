@@ -8,14 +8,13 @@
         <div class="black-text receiver-name">
           <p>
             <strong><%= show_name conversation %></strong>
+          </p>
+          <% unless conversation.messages.blank? %>
             <% message = conversation.messages.last %>
             <i class="update-time right"><%= display_time message.created_at %></i>
-          </p>
-          <p class="<%= "unread-msg" unless message.read %>">
+            <p class="<%= "unread-msg" unless message.read %>">
             <%= message.content[0..15] %></p>
-            <% if message.read %>
-              <i><%= "read at #{time_ago_in_words message.updated_at}" %></i>
-            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
