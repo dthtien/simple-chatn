@@ -10,10 +10,6 @@ class MessagesController < ApplicationController
         format.js
       end
     end
-    # else
-    #   flash.now[:alert] = "Can't create message"
-    #   render :index
-    # end
   end
 
   private

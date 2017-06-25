@@ -4,7 +4,8 @@
 @import "materialize";
 @import "messages";
 @import "conversations";
-
+@import "users";
+@import "searches";
 body {
   background-color: $primary-bg-color;
   overflow-x: hidden;

@@ -11,8 +11,13 @@ Rails.application.routes.draw do
   resources :users
   resource :search, only: :show
 
-  resources :conversations, only: [:create, :show] do
+  resources :conversations, only: [:create, :show, :index] do
     resources :messages, only: [:create]
   end
+
+  post "add_friend", to: "friendships#add_friend"
+  post "unfriend", to: "friendships#unfriend"
+  post "block", to: "friendships#block"
+  post "unblock", to: "friendships#unblock"
 
 end

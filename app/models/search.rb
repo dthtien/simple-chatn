@@ -5,7 +5,7 @@ class Search
   end
 
   def users
-    User.where("email LIKE ?", "%#{term}%")
+    User.where("email LIKE ? OR lower(name) LIKE ?", "%#{term}%", "%#{term.downcase}%")
   end
   
   

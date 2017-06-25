@@ -1,9 +1,11 @@
-<h1 class="center">Sign In</h1>
-<div class="sign-in-form">
-  <%= simple_form_for :session,url: log_in_path, html: { autocomplete: 'off' } do |f|  %>
-    <%= f.input :email %>
-    <%= f.input :password %>
+<div class="container">
+  <h1 class="center">Sign In</h1>
+  <div class="sign-in-form">
+    <%= simple_form_for :session,url: log_in_path, html: { autocomplete: 'off' } do |f|  %>
+      <%= f.input :email %>
+      <%= f.input :password %>
 
-    <%= f.submit "Log In", class: "btn blue" %>
-  <% end %>
+      <%= f.submit "Log In", class: "btn blue" %>
+    <% end %>
+  </div>
 </div>
