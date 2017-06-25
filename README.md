@@ -1,15 +1,19 @@
 # Homework 2 - *Simple-chatn*
 
-**Name of your app** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
+**Simple chatn** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
 
-Submitted by: **Your Name Here**
+Submitted by: **The Tien**
 
-Time spent: **X** hours
+Time spent: **16** hours
 
-URL: **Insert your Heroku URL here**
+URL: **https://obscure-dawn-90234.herokuapp.com**
 
 ## User Stories
-
+Account test
+acc1: email:  test1@test.com
+       pass:     123123
+acc2 email:  test2@test.com
+       pass:     123123
 The following **required** functionality is complete:
 
 
